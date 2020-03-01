@@ -74,13 +74,24 @@
 
     <div style="padding: 38px; text-align: center;">
         <h1>Welcome To <b>Flood Fiction</b></h1>
-        <div style="padding-top: 50px;"></div>
-        <a class="btn btn-primary"  href="gamepage.html" role="button" 
-        style="font-size: 36px; padding-left: 30px; padding-right: 30px;"> Start </a>
+        
+        <h1>Game Page</h1>
+
+        <input id="myInput" value="enter text..." onkeydown="if(event.keyCode == 13)
+        document.getElementById('myBtn').click()" onfocus="this.value=''" />
+    
+        <button id="myBtn" onclick="SubmitTxt()">Button</button>
         <hr>
 
+        <p id="txtOut" style="bottom: 20%;">GGS</p>
+    
+    
 
-
+        <hr>
+        <button onclick="GetData()" class="btn btn-primary" >Show DB</button>
+        <button onclick="DeleteDB()" class="btn btn-primary" >Hide DB</button><br />
+    
+        <div id="DBid">
        
     </div>
 </body>

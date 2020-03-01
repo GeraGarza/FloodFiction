@@ -38,8 +38,9 @@ app.get('/api', (request, response) => {
 //  client to send data to me;  callback(es6 js), \
 //  fnc erq holds data being sent, response is used to send to client
 // recieve post from client's api route.
-app.use(express.json({limit:'1mb'}));
+app.use(express.json({limit:'10mb'}));
 app.post('/api', (request,response) => {
+    console.log('kinda here');
     const data = request.body 
     const timestamp = Date.now();
     data.timestamp = timestamp
@@ -49,3 +50,17 @@ app.post('/api', (request,response) => {
     response.end();
 }); 
 
+
+
+app.delete('/del/:id',  function (req, res) {
+
+
+    database.remove({ _id: req.params.id }, {}, function (err, numRemoved) {
+        // numRemoved = 1
+      });
+
+
+      
+    console.log(req.params.id);
+    res.send('DELETE request to homepage')
+  })

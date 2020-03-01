@@ -13,6 +13,7 @@ module.exports = function (grunt) {
                 files: {
                     // to index.html : from (file with  <!--(bake XX.html)-->)
                     "public/index.html": "public/prod/index.html",
+                    "public/gamepage.html": "public/prod/gamepage.html",
                 }
             },
         },
