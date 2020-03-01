@@ -22,27 +22,15 @@
         <p id="txtOut" style="bottom: 20%;">GGS</p>
 
 
+    
         <hr>
-        <!-- Through Button -->
-        <button id="find-me">Show my location</button><br />
-        <p id="status"></p>
-        <a id="map-link" target="_blank"></a>
+        <button onclick="GetData()" class="btn btn-primary" >Show DB</button>
+        <button onclick="DeleteDB()" class="btn btn-primary" >Hide DB</button><br />
 
-        <hr>
-        <button onclick="GetData()" >Show my DB</button><br />
-
-        <div style="background-color: rgb(120, 40, 220); border-radius: 25px;">
-            <div id="DBid" style="padding: 20px;"></div>
+        <div id="DBid">
         </div>
 
-        <hr>
-        <!-- Not Button -->
-        <button onclick="FindMe()">Show my location Again</button><br />
-
-        <p onload="FindMe();">
-            latitude: <span id="latitude"></span>&deg;<br />
-            longitude: <span id="longitude"></span>&deg;<br />
-        </p>
+       
     </div>
 </body>
 
