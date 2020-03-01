@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- ----- Client SIDE ----- -->
+<!--(bake header.html)-->
+
+<body style="background-color: blueviolet;">
+    <script src="js/scripts.js"></script>
+
+    <div style="padding: 30px;">
+        <h1>Data gg App</h1>
+        
+        <a class="btn btn-primary"  href="all.html" role="button"> DB </a>
+        <hr>
+
+
+        <input id="myInput" value="enter text..." onkeydown="if(event.keyCode == 13)
+        document.getElementById('myBtn').click()" onfocus="this.value=''" />
+
+        <button id="myBtn" onclick="SubmitTxt()">Button</button>
+        <p id="txtOut" style="bottom: 20%;">GGS</p>
+
+
+        <hr>
+        <!-- Through Button -->
+        <button id="find-me">Show my location</button><br />
+        <p id="status"></p>
+        <a id="map-link" target="_blank"></a>
+
+        <hr>
+        <button onclick="GetData()" >Show my DB</button><br />
+
+        <div style="background-color: rgb(120, 40, 220); border-radius: 25px;">
+            <div id="DBid" style="padding: 20px;"></div>
+        </div>
+
+        <hr>
+        <!-- Not Button -->
+        <button onclick="FindMe()">Show my location Again</button><br />
+
+        <p onload="FindMe();">
+            latitude: <span id="latitude"></span>&deg;<br />
+            longitude: <span id="longitude"></span>&deg;<br />
+        </p>
+    </div>
+</body>
+
+</html>

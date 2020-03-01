@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- ----- Client SIDE ----- -->
+<head>
+    <meta charset="UTF-8">
+    <title>gg</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+    <!-- Navbar -->
+    <div class="w3-top" style="z-index:2; background-color: transparent; color:black">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" style="color:black"
+            href="javascript:void(0)" onclick="ToggleNav()" title="Toggle Navigation Menu"><i
+                class="fa fa-bars"></i></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large" style="font-size:18px; color:black">Flood
+            <b>Fiction</b></a>
+        <div class="w3-right" style="color:black;">
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small" id="home">Home</a>
+            <a href="AboutMe.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small" id="news">Game</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="Service.html" class="w3-bar-item w3-button">Settings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top"
+        style="margin-top:46px; padding-left:20px;padding-right:20px">
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="ToggleNav()">Home</a>
+        <a href="projects.html" class="w3-bar-item w3-button w3-padding-large" onclick="ToggleNav()">Game</a>
+    </div>
+
+    <picture id="nav-img">
+        <source media="(min-width: 900px)" srcset="Border2.png" style="width:100%;z-index:1;position:fixed">
+        <source media="(min-width: 480px)" srcset="Border2S.png" style="width:100%;z-index:1;position:fixed">
+        <img src="Border2S.png" alt="IfItDoesntMatchAnyMedia" style="width:100%;z-index:1;position:fixed">
+    </picture>
+
+    <div style="height: 130px;"></div>
+</head>
+
+
+
+<script>
+    // Automatic Slideshow - change image every 4 seconds
+    var myIndex = 0;
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function ToggleNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+</script>
+
+<body style="background-color: blueviolet;">
+    <script src="js/scripts.js"></script>
+
+    <div style="padding: 30px;">
+        <h1>Data gg App</h1>
+        
+        <a class="btn btn-primary"  href="all.html" role="button"> DB </a>
+        <hr>
+
+
+        <input id="myInput" value="enter text..." onkeydown="if(event.keyCode == 13)
+        document.getElementById('myBtn').click()" onfocus="this.value=''" />
+
+        <button id="myBtn" onclick="SubmitTxt()">Button</button>
+        <p id="txtOut" style="bottom: 20%;">GGS</p>
+
+
+        <hr>
+        <!-- Through Button -->
+        <button id="find-me">Show my location</button><br />
+        <p id="status"></p>
+        <a id="map-link" target="_blank"></a>
+
+        <hr>
+        <button onclick="GetData()" >Show my DB</button><br />
+
+        <div style="background-color: rgb(120, 40, 220); border-radius: 25px;">
+            <div id="DBid" style="padding: 20px;"></div>
+        </div>
+
+        <hr>
+        <!-- Not Button -->
+        <button onclick="FindMe()">Show my location Again</button><br />
+
+        <p onload="FindMe();">
+            latitude: <span id="latitude"></span>&deg;<br />
+            longitude: <span id="longitude"></span>&deg;<br />
+        </p>
+    </div>
+</body>
+
+</html>
