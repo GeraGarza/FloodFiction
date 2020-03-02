@@ -21,7 +21,7 @@ const Datastore = require('nedb')
 const app = express();
 
 //  port we arent using , callback
-app.listen(3000, ()=> console.log('listening at 3000'))
+app.listen(3000, () => console.log('listening at 3000'))
 app.use(express.static('public'))
 
 const database = new Datastore('database.db');
@@ -38,29 +38,25 @@ app.get('/api', (request, response) => {
 //  client to send data to me;  callback(es6 js), \
 //  fnc erq holds data being sent, response is used to send to client
 // recieve post from client's api route.
-app.use(express.json({limit:'10mb'}));
-app.post('/api', (request,response) => {
-    console.log('kinda here');
-    const data = request.body 
+app.use(express.json({ limit: '10mb' }));
+app.post('/api', (request, response) => {
+    const data = request.body
     const timestamp = Date.now();
     data.timestamp = timestamp
     data.status = '😁';
     database.insert(data)
     response.json(data)
     response.end();
-}); 
+});
 
 
 
-app.delete('/del/:id',  function (req, res) {
+app.delete('/del/:id', function (req, res) {
 
 
     database.remove({ _id: req.params.id }, {}, function (err, numRemoved) {
         // numRemoved = 1
-      });
+    });
 
 
-      
-    console.log(req.params.id);
-    res.send('DELETE request to homepage')
-  })
+})

@@ -1,7 +1,7 @@
 
 
 
-function FindMe(usrTxt) {
+function insertData(usrTxt) {
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(async postition => {
       const lat = postition.coords.latitude;
@@ -28,7 +28,7 @@ function FindMe(usrTxt) {
 
 
 
-async function GetData() {
+async function ShowData() {
 
   // var gg = document.getElementById("DBid");
   const DB = document.querySelector('#DBid');
@@ -82,9 +82,10 @@ async function GetData() {
 
 
 function deleteData(id) {
-  return fetch('/del/' + id, {
+  fetch('/del/' + id, {
     method: 'delete'
   })
+  ShowData();
 }
 
 
@@ -98,7 +99,15 @@ function DeleteDB() {
 
 function SubmitTxt() {
   var usrTxt = document.getElementById("myInput").value;
+  if(usrTxt.length < 1 || usrTxt == 'Enter text...') return;
+
   document.getElementById("txtOut").textContent = usrTxt;
-  FindMe(usrTxt);
+
+  (async () => {
+    let inserted = await insertData(usrTxt)
+    let shown = await ShowData();
+  })();
+
+
 
 }

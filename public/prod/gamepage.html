@@ -8,13 +8,13 @@
 <body style="background-color: blueviolet;">
     <script src="js/scripts.js"></script>
 
-    <div style="padding: 38px; text-align: center;">
+    <div style="padding: 38px; text-align: center; padding-top: 50px;">
         <h1>Welcome To <b>Flood Fiction</b></h1>
         
-        <h1>Game Page</h1>
-
-        <input id="myInput" value="enter text..." onkeydown="if(event.keyCode == 13)
-        document.getElementById('myBtn').click()" onfocus="this.value=''" />
+        <h1 style="padding-top: 120px;">Your word is: </h1>
+        <div style="font-size: 40px; padding-bottom: 40px;"><b>Conflagration</b></div>
+        <input id="myInput" value="Enter text..." onkeydown="if(event.keyCode == 13)
+        document.getElementById('myBtn').click();" onfocus="this.value=''" />
     
         <button id="myBtn" onclick="SubmitTxt()">Button</button>
         <hr>
@@ -24,7 +24,7 @@
     
 
         <hr>
-        <button onclick="GetData()" class="btn btn-primary" >Show DB</button>
+        <button onclick="ShowData()" class="btn btn-primary" >Show DB</button>
         <button onclick="DeleteDB()" class="btn btn-primary" >Hide DB</button><br />
     
         <div id="DBid">
