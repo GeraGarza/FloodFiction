@@ -1,4 +1,4 @@
-![](public/images/website.png)
+![](public/images/website.jpeg)
 
 SET UP 
 # FloodFiction
