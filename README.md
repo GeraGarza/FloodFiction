@@ -1,3 +1,6 @@
+
+
+SET UP 
 # FloodFiction
 //  game for friends
 
