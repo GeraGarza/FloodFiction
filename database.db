@@ -120,3 +120,6 @@
 {"$$deleted":true,"_id":"6Gq9KtoY0IX1wJJu"}
 {"$$deleted":true,"_id":"4M8qxL2HUMMQLB9c"}
 {"$$deleted":true,"_id":"1oM2g43L3TKA0LR6"}
+{"lat":30.6181765,"long":-96.300417,"usrTxt":"this is my definition","timestamp":1583111600803,"status":"😁","_id":"BO102mOfFppcn9K6"}
+{"lat":30.6181765,"long":-96.300417,"usrTxt":"this is not mine","timestamp":1583111606784,"status":"😁","_id":"3Q91v5YMMY7uEG2v"}
+{"lat":30.6181765,"long":-96.300417,"usrTxt":"this is not mine","timestamp":1583111609539,"status":"😁","_id":"xLjOY96xae1PzqSG"}

@@ -13,8 +13,6 @@
 //  npm install grunt-contrib-watch --save-dev
 
 
-//  npm install w3 -g
-
 //----- SERVER SIDE -----
 const express = require('express');
 const Datastore = require('nedb')
@@ -52,11 +50,7 @@ app.post('/api', (request, response) => {
 
 
 app.delete('/del/:id', function (req, res) {
-
-
     database.remove({ _id: req.params.id }, {}, function (err, numRemoved) {
         // numRemoved = 1
     });
-
-
 })
