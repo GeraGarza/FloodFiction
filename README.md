@@ -30,3 +30,15 @@ npm install grunt-bake --save-dev   // https://www.npmjs.com/package/grunt-bake/
 
 npm install grunt-contrib-watch --save-dev
 
+
+// const db = monk('localhost/meower')
+//  mlab to deploy mogodb
+// now secret add mewower-db mogodb://<dbuser>:><dbpassword>@sdsadada.com:432/mewower
+
+// deploy backend in zeit.co (now) 
+//  now -e MONGO_URI=@meower-db
+//  now alias https://server-xcbctndkeg.now.sh meower-api
+
+//  front end deploy
+//  cd to client --> now
+//  now alias https://server-xcbctndkeg.now.sh meower

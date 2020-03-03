@@ -19,7 +19,7 @@ module.exports = function (grunt) {
         },
         watch: {
             scripts: {
-                files: ['public/**/*.html'],
+                files: ['public/prod/*.html'],
                 tasks: ['bake']
             }
         }
