@@ -21,7 +21,6 @@ app.use(express.json({ limit: '10mb' }));
 
 app.get('/', (req, res) => {
 
-
     database
         .find()
         .then(data => {
@@ -44,8 +43,6 @@ function isValidTxt(userTxt) {
 
 app.post('/db', (req, res) => {
 
-
-    console.log(req.body);
     if (isValidTxt(req.body)) {
         //   insert into db..
         const data = {

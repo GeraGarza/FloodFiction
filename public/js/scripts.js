@@ -2,7 +2,7 @@ const form = document.querySelector('form'); //grabbing element on pg
 const loadingElement = document.querySelector('.loading');
 const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000' : 'http://localhost:5000';
 
-const dbsElement = document.querySelector('.db');
+const dbsElement = document.querySelector('.db-div');
 
 
 loadingElement.style.display = 'none';
@@ -16,6 +16,8 @@ form.addEventListener('submit', async (event) => {
   const name = formData.get('name');
   const content = formData.get('content');
 
+  if(name.length < 1 || content.length < 1)return;
+  
   const data = {
     name,
     content
@@ -62,7 +64,6 @@ async function ShowData() {
     const usrTxt = document.createElement('div');
     const hor = document.createElement('hr');
     const btn = document.createElement("BUTTON");
-
     name.textContent = item.name;
     content.textContent = `Content: ${item.content}`
     const dateString = new Date(item.created).toLocaleString();
@@ -91,7 +92,7 @@ function deleteData(id) {
 function HideDB() {
   dbsElement.style.display = 'none';
 }
-function ShowData(){
+function DataVisible(){
   dbsElement.style.display = '';
 }
 

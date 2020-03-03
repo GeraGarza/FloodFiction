@@ -72,20 +72,20 @@
 
 <body style="background-color: blueviolet;">
     <div style="padding: 38px; text-align: center; padding-top: 50px;">
+
+        <h1>Welcome To <b>Flood Fiction</b></h1>
+
+        <h1 style="padding-top: 60px;">Your word is: </h1>
+        <div style="font-size: 40px; padding-bottom: 40px;"><b>Conflagration</b></div>
+
+        <div>
+            <button onclick="DataVisible()" class="btn btn-primary">Show DB</button>
+            <div class="divider"></div>
+            <button onclick="HideDB()" class="btn-primary">Hide DB</button>
+            <div class="divider"></div>
+            <button onclick="DeleteDB()" class="btn btn-danger">Delete DB</button><br />
+        </div>
         <main>
-            <h1>Welcome To <b>Flood Fiction</b></h1>
-
-            <h1 style="padding-top: 60px;">Your word is: </h1>
-            <div style="font-size: 40px; padding-bottom: 40px;"><b>Conflagration</b></div>
-
-            <div>
-                <button onclick="ShowData()" class="btn btn-primary">Show DB</button>
-                <div class="divider"></div>
-                <button onclick="HideDB()" class="btn-primary">Hide DB</button>
-                <div class="divider"></div>
-                <button onclick="DeleteDB()" class="btn btn-danger">Delete DB</button><br />
-            </div>
-
             <form class="user-form">
                 <label for="name">Name</label>
                 <input class="u-full-width" type="text" id="name" name="name">
@@ -100,10 +100,7 @@
                 <img src="images/loading.gif" alt="">
             </div>
 
-            <div class="db">
-
-            </div>
-
+            <div class="db-div">
         </main>
         <script src="js/scripts.js"></script>
 
